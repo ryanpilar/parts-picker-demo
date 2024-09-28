@@ -8,14 +8,15 @@ import { Label } from "@/components/ui/label";
 export const icons = [
     { id: "recents", icon: "🔥", label: "Recents", coordinates: { x: 7, y: 10 } },
     { id: "rocket", icon: "🚀", label: "Rocket", coordinates: { x: 15, y: 20 } },
+    { id: "100", icon: "💯", label: "100%", coordinates: { x: 69, y: 30 } },
+
     { id: "alien", icon: "👽", label: "Alien", coordinates: { x: 30, y: 15 } },
     { id: "robot", icon: "🤖", label: "Robot", coordinates: { x: 50, y: 42 } },
     { id: "gem", icon: "💎", label: "Gem", coordinates: { x: 65, y: 10 } },
     { id: "voltage", icon: "⚡", label: "Voltage", coordinates: { x: 20, y: 55 } },
-    { id: "star", icon: "⭐", label: "Star", coordinates: { x: 45, y: 22 } },
+    { id: "star", icon: "⭐", label: "Star", coordinates: { x: 90, y: 22 } },
     { id: "sun", icon: "☀️", label: "Sun", coordinates: { x: 70, y: 70 } },
     { id: "sparkles", icon: "✨", label: "Sparkles", coordinates: { x: 77, y: 80 } },
-    { id: "100", icon: "💯", label: "100", coordinates: { x: 40, y: 30 } },
     { id: "biceps", icon: "💪", label: "Biceps", coordinates: { x: 65, y: 40 } },
     { id: "star-eyes", icon: "🤩", label: "Star Eyes", coordinates: { x: 20, y: 80 } },
 ] as const;
