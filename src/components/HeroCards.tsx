@@ -37,13 +37,13 @@ export const HeroCards = ({ selectedItems }: HeroCardsProps) => {
             {/* The card to be converted to an image */}
             <Card
                 ref={cardRef}
-                className="relative w-[700px] h-[500px] flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10"
+                className="relative w-full xl:w-[700px] h-[500px] flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10"
             >
                 <CardContent className="text-center pb-2">
-                    <p>
-                        I really enjoy transforming ideas into functional software that
-                        exceeds expectations.
-                    </p>
+                    {/*<p>*/}
+                    {/*    I really enjoy transforming ideas into functional software that*/}
+                    {/*    exceeds expectations.*/}
+                    {/*</p>*/}
                 </CardContent>
 
                 {icons.map((icon) =>
@@ -52,24 +52,25 @@ export const HeroCards = ({ selectedItems }: HeroCardsProps) => {
                             key={icon.id}
                             style={{
                                 position: "absolute",
-                                left: `${icon.coordinates.x}px`,
-                                top: `${icon.coordinates.y}px`,
+                                left: `${icon.coordinates.x}%`,
+                                top: `${icon.coordinates.y}%`,
+                                transform: "translate(-50%, -50%)", // Center the icon on the coordinate
                             }}
                         >
-                            <span className="text-9xl">{icon.icon}</span> {/* XXXXL size */}
+                            <span className="text-6xl md:text-9xl">{icon.icon}</span> {/* Scaled with responsiveness */}
                         </div>
                     ) : null
                 )}
             </Card>
 
-            <div className="flex justify-end w-full mt-4 space-x-4">
+            <div className="flex justify-end w-full mt-7 space-x-4">
                 <Button
                     onClick={downloadImage}
                     variant='secondary'
-                    className="w-56 bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-white hover:bg-blue-700 flex items-center justify-center"
+                    className="w-full py-5 lg:w-56 bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-white hover:bg-blue-700 flex items-center justify-center"
                 >
                     Download Image
-                    <Download className="ml-2 w-5 h-5" /> {/* Download icon with spacing */}
+                    <Download className="ml-2 w-6 h-6" /> {/* Download icon with spacing */}
                 </Button>
             </div>
         </div>
