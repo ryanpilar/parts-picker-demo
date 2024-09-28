@@ -4,20 +4,22 @@ import { HeroCards } from "./HeroCards";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 
+// Strictly typed icons with larger size in the card
 export const icons = [
-    { id: "recents", icon: "⚡️", label: "Recents", coordinates: { x: 7, y: 10 } },
-    { id: "home", icon: "🏠", label: "Home", coordinates: { x: 15, y: 20 } },
-    { id: "applications", icon: "📱", label: "Applications", coordinates: { x: 30, y: 15 } },
-    { id: "desktop", icon: "💻", label: "Desktop", coordinates: { x: 50, y: 42 } },
-    { id: "music", icon: "🎵", label: "Music", coordinates: { x: 65, y: 10 } },
-    { id: "camera", icon: "📷", label: "Camera", coordinates: { x: 20, y: 55 } },
-    { id: "rocket", icon: "🚀", label: "Rocket", coordinates: { x: 45, y: 22 } },
-    { id: "pizza", icon: "🍕", label: "Pizza", coordinates: { x: 70, y: 70 } },
-    { id: "coffee", icon: "☕", label: "Coffee", coordinates: { x: 77, y: 80 } },
-    { id: "heart", icon: "❤️", label: "Heart", coordinates: { x: 40, y: 30 } },
-    { id: "smile", icon: "😊", label: "Smile", coordinates: { x: 65, y: 40 } },
-    { id: "fire", icon: "🔥", label: "Fire", coordinates: { x: 20, y: 80 } },
-];
+    { id: "recents", icon: "🔥", label: "Recents", coordinates: { x: 7, y: 10 } },
+    { id: "rocket", icon: "🚀", label: "Rocket", coordinates: { x: 15, y: 20 } },
+    { id: "alien", icon: "👽", label: "Alien", coordinates: { x: 30, y: 15 } },
+    { id: "robot", icon: "🤖", label: "Robot", coordinates: { x: 50, y: 42 } },
+    { id: "gem", icon: "💎", label: "Gem", coordinates: { x: 65, y: 10 } },
+    { id: "voltage", icon: "⚡", label: "Voltage", coordinates: { x: 20, y: 55 } },
+    { id: "star", icon: "⭐", label: "Star", coordinates: { x: 45, y: 22 } },
+    { id: "sun", icon: "☀️", label: "Sun", coordinates: { x: 70, y: 70 } },
+    { id: "sparkles", icon: "✨", label: "Sparkles", coordinates: { x: 77, y: 80 } },
+    { id: "100", icon: "💯", label: "100", coordinates: { x: 40, y: 30 } },
+    { id: "biceps", icon: "💪", label: "Biceps", coordinates: { x: 65, y: 40 } },
+    { id: "star-eyes", icon: "🤩", label: "Star Eyes", coordinates: { x: 20, y: 80 } },
+] as const;
+
 export const Hero = () => {
     const [selectedItems, setSelectedItems] = useState<string[]>([]);
 
@@ -102,3 +104,4 @@ export const Hero = () => {
         </section>
     );
 };
+
